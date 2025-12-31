@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Dec 31 11:46:29 2025
-
-@author: B-Book
-"""
-
 import pandas as pd
 
 # loading Data set
@@ -12,7 +5,7 @@ df= pd.read_csv(r"E:\Binoy\AI Projects\Project 2\IMDB Dataset.csv")
 
 # Data exploration
 df.head()
-#df.info()
+df.info()
 df['sentiment'].value_counts()
 df.isnull().sum()
 df['review'][0]
@@ -25,9 +18,9 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
-#nltk.download('stopwords')
-#nltk.download('wordnet')
-#nltk.download('omw-1.4')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 stop_words = set (stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
@@ -58,11 +51,11 @@ def clean_text(text):
 
 df['clean_review']= df['review'].apply(clean_text)
     
-#print("ORIGINAL REVIEW:\n")
-#print(df['review'][0])
+print("ORIGINAL REVIEW:\n")
+print(df['review'][0])
 
-#print("\nCLEANED REVIEW:\n")
-#print(df['clean_review'][0])
+print("\nCLEANED REVIEW:\n")
+print(df['clean_review'][0])
 
 ###### Analysing data   #######
 
@@ -94,13 +87,13 @@ model.fit(x_train_tfidf, y_train)
 y_pred = model.predict(x_test_tfidf)
 
 #Accuracy
-#accuracy = accuracy_score(y_test, y_pred)
-#print ('Accuracy:', accuracy)
+accuracy = accuracy_score(y_test, y_pred)
+print ('Accuracy:', accuracy)
 
 #Confusion Matrix
-#confusion_matrix(y_test, y_pred)
-
-#print (classification_report(y_test, y_pred))
+confusion_matrix(y_test, y_pred)
+#Classification report
+print (classification_report(y_test, y_pred))
     
 #### Naive Bayes Model #####
 
@@ -117,10 +110,10 @@ y_pred_nb = nb_model.predict(x_test_tfidf)
 
 #Accuracy
 accuracy_nb = accuracy_score(y_test, y_pred_nb)
-#print('Naive Bayes Accuracy:', accuracy_nb)
+print('Naive Bayes Accuracy:', accuracy_nb)
 
 #Classification report
-#print(classification_report(y_test, y_pred_nb))
+print(classification_report(y_test, y_pred_nb))
 
 ###### Charts #####
 
@@ -215,4 +208,5 @@ plt.show()
     
     
     
+
     
