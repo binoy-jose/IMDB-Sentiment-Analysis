@@ -1,13 +1,13 @@
 # IMDB-Sentiment-Analysis
 Sentiment analysis on IMDB movie reviews using NLP and machine learning
 
-## 📌 Project Overview
+## Project Overview
 This project performs **sentiment analysis** on IMDB movie reviews using **Natural Language Processing (NLP)** techniques.  
 The goal is to classify each movie review as **Positive** or **Negative** by building a complete machine learning pipeline from raw text to model evaluation and visualization.
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 Movie reviews are unstructured textual data. The objective of this project is to:
 - Clean and preprocess raw text reviews
 - Convert text data into numerical features
@@ -16,7 +16,7 @@ Movie reviews are unstructured textual data. The objective of this project is to
 
 ---
 
-## 🗂️ Dataset
+## Dataset
  **Name**: IMDB Dataset of 50K Movie Reviews
 - **Source**: Kaggle
 - **Link**: https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
@@ -27,9 +27,9 @@ Movie reviews are unstructured textual data. The objective of this project is to
 
 ---
 
-## 🧠 Methodology
+## Methodology
 
-### 1️⃣ Text Preprocessing
+### 1️ Text Preprocessing
 Raw movie reviews were cleaned using the following steps:
 - Removal of HTML tags using regular expressions
 - Conversion to lowercase
@@ -41,14 +41,14 @@ A new column `clean_review` was created after preprocessing.
 
 ---
 
-### 2️⃣ Feature Engineering
+### 2️ Feature Engineering
 - Text data was converted into numerical features using **TF-IDF Vectorization**
 - Limited to the **top 5000 most important words**
 - TF-IDF vectorizer was fitted only on training data to avoid data leakage
 
 ---
 
-### 3️⃣ Model Training
+### 3️ Model Training
 Two machine learning models were trained and compared:
 
 #### 🔹 Logistic Regression
@@ -61,7 +61,7 @@ Two machine learning models were trained and compared:
 
 ---
 
-### 4️⃣ Model Evaluation
+### 4️ Model Evaluation
 Models were evaluated using:
 - Accuracy
 - Precision
@@ -71,7 +71,7 @@ Models were evaluated using:
 
 ---
 
-## 📊 Results
+## Results
 
 | Model | Accuracy |
 |------|----------|
@@ -82,7 +82,7 @@ Logistic Regression achieved higher accuracy and was selected as the final model
 
 ---
 
-## 📈 Visualizations
+## Visualizations
 To improve interpretability and presentation, the following visualizations were created:
 - Model accuracy comparison bar chart
 - Confusion matrix for Logistic Regression
@@ -93,7 +93,7 @@ All plots are available in the `screenshots/` folder.
 
 ---
 
-## 🛠️ Tools & Libraries
+## Tools & Libraries
 - Python
 - Pandas
 - NumPy
@@ -103,7 +103,7 @@ All plots are available in the `screenshots/` folder.
 
 ---
 
-## 🚀 Key Learnings
+## Key Learnings
 - Importance of text preprocessing in NLP tasks
 - Difference between feature engineering and model learning
 - Comparison of probabilistic and discriminative classifiers
@@ -111,13 +111,13 @@ All plots are available in the `screenshots/` folder.
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 - Hyperparameter tuning
 - N-gram feature extraction
 - Deep learning models such as LSTM or BERT
 
 ---
 
-## ✅ Conclusion
+## Conclusion
 This project demonstrates an end-to-end NLP workflow for sentiment analysis, covering text preprocessing, feature engineering, model training, evaluation, and visualization. It showcases practical skills relevant to real-world data science and NLP applications.
 
